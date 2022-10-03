@@ -40,6 +40,29 @@ void line2(air::Point p0, air::Point p1, TGAImage& image, TGAColor color) {
 }
 
 //修复line2问题2：if (dx>dy) {for (int x)} else {for (int y)}
+void line3(air::Point p0, air::Point p1, TGAImage& image, TGAColor color) {
+	bool steep = false;
+	if (std::abs(p0.x - p1.x) < std::abs(p0.y - p1.y)) { // if the line is steep, we transpose the image 
+		air::transpose(p0);
+		air::transpose(p1);
+		steep = true;
+	}
+	if (p0.x > p1.x) { // make it left−to−right 
+		air::swap(p0, p1);
+	}
+	for (int x{ p0.x }; x <= p1.x; x++) {
+		float t = (x - p0.x) / (float)(p1.x - p0.x);
+		int y = p0.y * (1. - t) + p1.y * t;
+		if (steep) {
+			image.set(y, x, color); // if transposed, de−transpose 
+		}
+		else {
+			image.set(x, y, color);
+		}
+	}
+}
+
+//修复line2问题2：if (dx>dy) {for (int x)} else {for (int y)}
 //问题：由于除法的舍入，一个像素会设置很多次
 void line3(air::Point p0, air::Point p1, TGAImage& image, TGAColor color) {
 	bool steep = false;
