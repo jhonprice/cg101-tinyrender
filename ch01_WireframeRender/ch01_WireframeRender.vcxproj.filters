@@ -14,18 +14,27 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="framework">
-      <UniqueIdentifier>{1f9456f8-3504-4f65-8bb4-b73c3662bda9}</UniqueIdentifier>
+      <UniqueIdentifier>{c04689bb-ce2f-4bf4-9e9e-bffe97e28242}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DrawLine.cpp">
+    <ClCompile Include="WireframeRender.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\ch01\model.cpp">
+      <Filter>framework</Filter>
     </ClCompile>
     <ClCompile Include="..\include\ch01\tgaimage.cpp">
       <Filter>framework</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\ch01\geometry.h">
+      <Filter>framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ch01\model.h">
+      <Filter>framework</Filter>
+    </ClInclude>
     <ClInclude Include="..\include\ch01\tgaimage.h">
       <Filter>framework</Filter>
     </ClInclude>

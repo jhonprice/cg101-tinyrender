@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{73110813-b3b7-4c44-8843-59dc5c2e01cd}</ProjectGuid>
-    <RootNamespace>MyTinyRenderer</RootNamespace>
+    <ProjectGuid>{db46daaa-21ec-42b2-b890-fcbd1caa149f}</ProjectGuid>
+    <RootNamespace>ch01WireframeRender</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>ch01_DrawLine</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,10 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\include\ch01\model.cpp" />
     <ClCompile Include="..\include\ch01\tgaimage.cpp" />
-    <ClCompile Include="DrawLine.cpp" />
+    <ClCompile Include="WireframeRender.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\ch01\geometry.h" />
+    <ClInclude Include="..\include\ch01\model.h" />
     <ClInclude Include="..\include\ch01\tgaimage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

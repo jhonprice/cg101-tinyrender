@@ -1,4 +1,4 @@
-﻿#include "../include/tgaimage.h"
+﻿#include "../include/ch01/tgaimage.h"
 
 const TGAColor white = TGAColor(255, 255, 255, 255);
 const TGAColor red = TGAColor(255, 0, 0, 255);
@@ -40,6 +40,7 @@ void line2(air::Point p0, air::Point p1, TGAImage& image, TGAColor color) {
 }
 
 //修复line2问题2：if (dx>dy) {for (int x)} else {for (int y)}
+//问题：由于除法的舍入，一个像素会设置很多次
 void line3(air::Point p0, air::Point p1, TGAImage& image, TGAColor color) {
 	bool steep = false;
 	if (std::abs(p0.x - p1.x) < std::abs(p0.y - p1.y)) { // if the line is steep, we transpose the image 
