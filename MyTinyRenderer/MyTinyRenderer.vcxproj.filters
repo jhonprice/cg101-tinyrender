@@ -21,12 +21,12 @@
     <ClCompile Include="MyTinyRenderer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="tgaimage.cpp">
+    <ClCompile Include="..\include\tgaimage.cpp">
       <Filter>framework</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="tgaimage.h">
+    <ClInclude Include="..\include\tgaimage.h">
       <Filter>framework</Filter>
     </ClInclude>
   </ItemGroup>
