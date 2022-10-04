@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{bf43155d-9069-4890-a886-db7a91069aa4}</ProjectGuid>
-    <RootNamespace>ch02Rasterization</RootNamespace>
+    <ProjectGuid>{72bdbf78-4752-4e91-b221-bd9f0e6d6bc1}</ProjectGuid>
+    <RootNamespace>ch02FlatRender</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -129,7 +129,7 @@
   <ItemGroup>
     <ClCompile Include="..\include\ch02\model.cpp" />
     <ClCompile Include="..\include\ch02\tgaimage.cpp" />
-    <ClCompile Include="ch02_Rasterization.cpp" />
+    <ClCompile Include="ch02_FlatRender.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\ch02\geometry.h" />
